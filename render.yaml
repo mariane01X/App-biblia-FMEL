@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: verbo-vivo
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
